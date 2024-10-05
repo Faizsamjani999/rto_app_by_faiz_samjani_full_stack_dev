@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application</title>
+    <style>
+        #main{
+            width: 100%;
+            height: auto;
+            /* border: 1px solid black; */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        #app{
+            width: 40%;
+            height: 450px;
+            /* border: 1px solid black; */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            background-color: rgb(76, 73, 73);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <h1>Application Request</h1>
+        <%data.map((val)=>{%>
+            <div id="app">
+                <h1>GJ - <%=val.vehicleId.seriesId.districtId.district%> - <%=val.vehicleId.seriesId.series%> - <%=val.vehicleId.vehicle%></h1>
+                <h1><%=val.buyerName%></h1>
+                <h1><%=val.buyerNumber%></h1>
+                <h1><%=val.buyerLocation%></h1>
+                <h1 style="color: rgb(64, 197, 64);text-align: center;"><%-acceptMsg[0]-%></h1>
+            </div>
+        <%})%>
+    </div>
+</body>
+</html>

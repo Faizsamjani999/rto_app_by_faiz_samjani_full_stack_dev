@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Vehicle Registration</title>
+  <!-- plugins:css -->
+  <link rel="stylesheet" href="../../vendors/ti-icons/css/themify-icons.css">
+  <link rel="stylesheet" href="../../vendors/base/vendor.bundle.base.css">
+  <!-- endinject -->
+  <!-- plugin css for this page -->
+  <!-- End plugin css for this page -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="../../css/style.css">
+  <!-- endinject -->
+  <link rel="shortcut icon" href="../../images/favicon.png" />
+</head>
+
+<body>
+  <div class="container-scroller">
+    <!-- partial:../../partials/_navbar.html -->
+    <%-include('adminHeader')-%>
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper">
+      <!-- partial:../../partials/_sidebar.html -->
+      <%-include('adminAside')-%>
+      <!-- partial -->
+      <div class="main-panel">        
+        <div class="content-wrapper">
+          <div class="row">
+            <div class="col-12 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">RTO Registration</h4>
+                  <p class="card-description" style="font-size: 30px;color: blue;">
+                    Changes in Vehicle Registration By RTO GUJARAT
+                  </p>
+                  <form class="forms-sample" method="post" action="/updateRegistrationVehicle" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <input type="hidden" name="id" value="<%=edit.id%>">
+                      <label for="exampleInputName1">Vehicle Owner Fullname</label>
+                      <input type="text" class="form-control" id="exampleInputName1" placeholder="Name" name="ownerName" value="<%=edit.ownerName%>">
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputEmail3">State</label>
+                      <input type="text" class="form-control" id="exampleInputEmail3" placeholder="State" value="GJ" name="state">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputName1">District Code</label>
+                        <input type="text" class="form-control" id="exampleInputName1" placeholder="Ex - 01,02,03" name="districtCode" value="<%=edit.districtCode%>">
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputName1">Vehicle Series Code</label>
+                        <input type="text" class="form-control" id="exampleInputName1" placeholder="Ex - AB,AC,AB" name="seriesCode" value="<%=edit.seriesCode%>">
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputName1">NUMBER OF VEHICLE</label>
+                        <input type="text" class="form-control" id="exampleInputName1" placeholder="Ex - 1111,5252,0001" name="numberVehicle" value="<%=edit.numberVehicle%>">
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputName1">Registration Date</label>
+                        <input type="date" class="form-control" id="exampleInputName1" placeholder="Ex - 18-5-2021" name="registerDate" value="<%=edit.registerDate%>">
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputName1">Type Of Vehicle</label>
+                        <input type="text" class="form-control" id="exampleInputName1" placeholder="Ex - Bike,Car,Heavy-Vehicle" name="typeVehicle" value="<%=edit.typeVehicle%>">
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputName1">MODEL</label>
+                        <input type="text" class="form-control" id="exampleInputName1" placeholder="Ex - shine,wagon-r" name="modelVehicle" value="<%=edit.modelVehicle%>">
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputName1">Company Name</label>
+                        <input type="text" class="form-control" id="exampleInputName1" placeholder="Ex - Hero,Honda,Maruti-Suzuki" name="companyVehicle" value="<%=edit.companyVehicle%>">
+                      </div>
+                    <div class="form-group">
+                      <label>Vehicle Image</label>
+                      <input type="file" name="image" class="file-upload-default">
+                      <div class="input-group col-xs-12">
+                        <input type="text" class="form-control file-upload-info" disabled placeholder="Upload Image Passport Size">
+                        <span class="input-group-append">
+                          <button class="file-upload-browse btn btn-primary" type="button">Upload</button>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputCity1">Mobile - Number</label>
+                        <input type="text" class="form-control" id="exampleInputCity1" placeholder="Mobile - Number" name="mobile" value="<%=edit.mobile%>">
+                      </div>
+                    <div class="form-group">
+                      <label for="exampleInputCity1">City</label>
+                      <input type="text" class="form-control" id="exampleInputCity1" placeholder="Location" name="location" value="<%=edit.location%>">
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary me-2">Submit</button>
+                  </form>
+                </div>
+              </div>
+            </div> 
+          </div>
+        </div>
+        <!-- content-wrapper ends -->
+        <!-- partial:../../partials/_footer.html -->
+        <footer class="footer">
+          <div class="d-sm-flex justify-content-center justify-content-sm-between">
+            <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © <a href="https://www.bootstrapdash.com/" target="_blank">bootstrapdash.com </a>2021</span>
+            <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Only the best <a href="https://www.bootstrapdash.com/" target="_blank"> Bootstrap dashboard </a> templates</span>
+          </div>
+        </footer>
+        <!-- partial -->
+      </div>
+      <!-- main-panel ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
+  </div>
+  <!-- container-scroller -->
+  <!-- plugins:js -->
+  <script src="../../vendors/base/vendor.bundle.base.js"></script>
+  <!-- endinject -->
+  <!-- inject:js -->
+  <script src="../../js/off-canvas.js"></script>
+  <script src="../../js/hoverable-collapse.js"></script>
+  <script src="../../js/template.js"></script>
+  <script src="../../js/todolist.js"></script>
+  <!-- endinject -->
+  <!-- Custom js for this page-->
+  <script src="../../js/file-upload.js"></script>
+  <!-- End custom js for this page-->
+</body>
+
+</html>
